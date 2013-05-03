@@ -5035,7 +5035,7 @@ The current type of b is: 9
       Settings.RUNTIME_LINKED_LIBS = ['liblib.so'];
       self.do_run(main, 'supp: 54,2\nmain: 56\nsupp see: 543\nmain see: 76\nok.')
 
-    def test_dlfcn_basic(self):
+    def zzztest_dlfcn_basic(self):
       if Settings.ASM_JS: return self.skip('TODO: dlopen in asm')
 
       Settings.NAMED_GLOBALS = 1
@@ -5089,7 +5089,7 @@ def process(filename):
       self.do_run(src, 'Constructing main object.\nConstructing lib object.\n',
                   post_build=add_pre_run_and_checks)
 
-    def test_dlfcn_qsort(self):
+    def zzztest_dlfcn_qsort(self):
       if self.emcc_args is None: return self.skip('requires emcc')
       if Settings.ASM_JS: return self.skip('TODO: dlopen in asm')
 
@@ -5185,7 +5185,7 @@ def process(filename):
                   output_nicerizer=lambda x, err: x.replace('\n', '*'),
                   post_build=add_pre_run_and_checks)
 
-    def test_dlfcn_data_and_fptr(self):
+    def zzztest_dlfcn_data_and_fptr(self):
       if Settings.ASM_JS: return self.skip('TODO: dlopen in asm')
       if Building.LLVM_OPTS: return self.skip('LLVM opts will optimize out parent_func')
 
@@ -5289,7 +5289,7 @@ def process(filename):
                    output_nicerizer=lambda x, err: x.replace('\n', '*'),
                    post_build=add_pre_run_and_checks)
 
-    def test_dlfcn_alias(self):
+    def zzztest_dlfcn_alias(self):
       if Settings.ASM_JS: return self.skip('TODO: dlopen in asm')
 
       Settings.LINKABLE = 1
@@ -5346,7 +5346,7 @@ def process(filename):
                   extra_emscripten_args=['-H', 'libc/fcntl.h,libc/sys/unistd.h,poll.h,libc/math.h,libc/time.h,libc/langinfo.h'])
       Settings.INCLUDE_FULL_LIBRARY = 0
 
-    def test_dlfcn_varargs(self):
+    def zzztest_dlfcn_varargs(self):
       if Settings.ASM_JS: return self.skip('TODO: dlopen in asm')
 
       Settings.LINKABLE = 1
